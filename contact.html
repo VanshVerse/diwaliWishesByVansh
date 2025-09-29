@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Message VANSH | Diwali Celebration</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+      margin: 0;
+      padding: 0;
+      color: #4e342e;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6f00, #e65100);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #fbc02d;
+    }
+
+    h1 {
+      animation: sparkleText 2s infinite;
+      text-shadow: 0 0 10px #fff176;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #fff176;
+    }
+
+    main {
+      padding: 30px;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diya_lamp.jpg/640px-Diya_lamp.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h2 {
+      color: #bf360c;
+      font-size: 28px;
+      margin-bottom: 10px;
+      animation: sparkleText 2s infinite;
+    }
+
+    .greeting {
+      font-size: 20px;
+      color: #6d4c41;
+      margin-bottom: 30px;
+      background-color: #fff3e0;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px #ff9800;
+      animation: fadeIn 2s ease-out;
+    }
+
+    form {
+      background-color: #fff8e1;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #ff9800;
+      display: inline-block;
+      text-align: left;
+      width: 90%;
+      max-width: 300px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #5d4037;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ffcc80;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #ff6f00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    .diya {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ff5722, #e64a19);
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      margin: 30px auto;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .diya::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 20px;
+      background: radial-gradient(circle, #fff176, #fbc02d);
+      border-radius: 50%;
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    #replyBox {
+      background: #fff3e0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff9800;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #4e342e;
+      width: 90%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #6d4c41;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff9800; }
+      to { box-shadow: 0 0 20px #ff5722; }
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes sparkleText {
+      0% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+      50% { color: #fbc02d; text-shadow: 0 0 15px #ff9800; }
+      100% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🪔 Apna Message Vansh Ko Bhejein 🪔</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="greeting">
+      <strong>Namaste Doston!</strong><br>
+      Diwali ki hardik shubhkamnayein! Apna naam aur message isme fill kre ✨
+    </div>
+
+    <form onsubmit="showReply(); return false;">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" rows="4" required></textarea><br><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="diya"></div>
+
+    <h3>📬 Your Message:</h3>
+    <div id="replyBox"></div>
+
+    <script>
+      function showReply() {
+        var name = document.getElementById("name").value;
+        var message = document.getElementById("message").value;
+        var reply = "<strong>" + name + " says:</strong><br>" + message;
+        document.getElementById("replyBox").innerHTML = reply;
+      }
+    </script>
+  </main>
+
+  <footer>
+    Made with ❤️ by Vansh | Diwali 2025
+  </footer>
+</body>
+</html>

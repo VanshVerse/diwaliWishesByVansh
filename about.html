@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff8e1, #ffe0b2);
+      color: #4e342e;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6f00, #e65100);
+      color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #fff176;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #bf360c;
+      text-shadow: 0 0 10px #ff9800;
+      animation: sparkleText 2s infinite;
+    }
+
+    p {
+      font-size: 18px;
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ff9800;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .diya {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ff5722, #e64a19);
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      margin: 30px auto;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .diya::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 20px;
+      background: radial-gradient(circle, #fff176, #fbc02d);
+      border-radius: 50%;
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff9800; }
+      to { box-shadow: 0 0 20px #ff5722; }
+    }
+
+    @keyframes flicker {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes sparkleText {
+      0% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+      50% { color: #fbc02d; text-shadow: 0 0 15px #ff9800; }
+      100% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #6d4c41;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Meet Vansh</h2>
+    <p>
+      I'm a creative soul who loves coding, festivals, and sharing joy with friends.  
+      This Diwali-themed website is my way of spreading light and happiness.  
+      Explore the pages and feel the festive vibes!
+    </p>
+    <div class="diya"></div>
+  </main>
+
+  <footer>
+    Made with ❤️ by Vansh | Diwali 2025
+  </footer>
+</body>
+</html>

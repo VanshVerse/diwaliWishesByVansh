@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff8e1, #ffe0b2);
+      color: #4e342e;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6f00, #e65100);
+      color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #fff176;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #bf360c;
+      text-shadow: 0 0 10px #ff9800;
+    }
+
+    .diya {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ff5722, #e64a19);
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      margin: 30px auto;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .diya::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 20px;
+      background: radial-gradient(circle, #fff176, #fbc02d);
+      border-radius: 50%;
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff9800; }
+      to { box-shadow: 0 0 20px #ff5722; }
+    }
+@keyframes sparkleText {
+  0% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+  50% { color: #fbc02d; text-shadow: 0 0 15px #ff9800; }
+  100% { color: #ff6f00; text-shadow: 0 0 5px #fff176; }
+}
+
+h2 {
+  font-size: 28px;
+  animation: sparkleText 2s infinite;
+}
+    @keyframes flicker {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+    .firework {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #ff4081;
+  border-radius: 50%;
+  animation: burst 1s infinite ease-in-out;
+}
+
+@keyframes burst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(5); opacity: 0; }
+}
+
+.greeting {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+<div class="greeting">
+  <p>To my all Friends</p>
+  <h2>Happy Diwali!</h2>
+  <p>Wishing you joy, light, and prosperity!</p>
+</div>
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #6d4c41;
+    }
+  </style>
+</head>
+<body><div class="greeting">
+  <p>To my all Friends</p>
+  <h2>Happy Diwali!</h2>
+  <p>Wishing you joy, light, and prosperity!</p>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <p>To my all Friends</p>
+    <div class="diya"></div>
+    <h2>Happy Diwali!</h2>
+    <p>Wishing you joy, light, and prosperity!</p>
+  </main>
+  <footer>
+    Made with ❤️ by Vansh | Diwali 2025
+  </footer>
+</body>
+</html>

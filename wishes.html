@@ -23,29 +23,38 @@
       margin-bottom: 30px;
     }
 
-    .scroll-gallery {
+    .vertical-gallery {
       display: flex;
-      overflow-x: auto;
-      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-height: 80vh;
+      overflow-y: auto;
       padding: 10px;
       scroll-behavior: smooth;
+
     }
 
-    .scroll-gallery img {
-      height: 250px;
+    .vertical-gallery img {
+      width: 80%;
+      max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
+
     }
 
-    .scroll-gallery img:hover {
+     .vertical-gallery img:hover {
       transform: scale(1.05);
     }
+
 
     .festival-label {
       font-weight: bold;
       margin-top: 10px;
       color: #6d4c41;
+       font-size: 1.1em;
+
     }
   </style>
 </head>
@@ -54,8 +63,8 @@
   <h1>🎇 Vansh Ki Festive Gallery 🎇</h1>
   <p>Diwali ke roshan pal, Dhanteras ki shubh kharidari, Govardhan ki bhakti aur Bhai Dooj ka pyaar — sab kuch ek jagah ✨</p>
 
-  <div class="scroll-gallery">
-    <div class="scroll-gallery">
+  <div class="vertical-gallery">
+   
   <div>
     <img src="diwali.jpg.jpg" alt="Diwali">
     <div class="festival-label">Diwali 🪔</div>
@@ -71,7 +80,6 @@
   <div>
     <img src="bhaidooj.jpg.webp"  alt="Bhai Dooj"> 
     <div class="festival-label">Bhai Dooj 🪁</div>
-  </div>
 </div>
   </div>
 
